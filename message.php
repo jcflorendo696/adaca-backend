@@ -4,7 +4,7 @@ $url = 'http://localhost:8888/adaca_backend/fake_api.php';
 
 $data = array(
     'conversation_id'   => '20231123', 
-    'message'           => ''
+    'message'           => 'earth hello goodbye'
 );
 
 $dataJSON = json_encode($data);

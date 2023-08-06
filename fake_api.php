@@ -19,14 +19,14 @@ if ($jsonData === null) {
     $wordsPos = array();
 
     foreach($wordsArr as $item){
-        if(strpos($lowercaseMessage, $item)){
+        if(strpos($lowercaseMessage, $item) || strpos($lowercaseMessage, $item) === 0 ){
             $wordsPos[strpos($lowercaseMessage, $item)] = $item;
         }
     };
 
     ksort($wordsPos);
     $firstword = array_values(array_slice($wordsPos, 0, 1));
-    
+
     if($firstword[0] === 'hello' || $firstword[0] === 'hi'){
         $response_msg = "Welcome to Station Five";
     }else if($firstword[0] === 'bye' || $firstword[0] === 'goodbye'){
